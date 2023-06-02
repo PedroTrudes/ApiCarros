@@ -9,6 +9,8 @@ const server = express();
 server.use(cors());
 server.use(bodyParser.urlencoded({extended: false}));
 
+server.use('/api', routes);//colocando um prefixo em todas as rotas
+
 server.listen(process.env.PORT, ()=>{
     console.log(`Hello Word, server rodando em htpp://localhost:${process.env.PORT}`);
 })
